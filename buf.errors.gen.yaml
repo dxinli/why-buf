@@ -1,0 +1,15 @@
+version: v2
+
+plugins:
+  - local: protoc-gen-go-errors
+    # Required. Controls where the generated files are deposited for a given plugin.
+    # Although absolute paths are supported,
+    # this configuration is typically a relative output directory to where buf generate is run.
+    out: api
+    opt:
+      - paths=source_relative
+
+inputs:
+  - directory: api
+    paths:
+      - helloworld/v1/error_reason.proto
