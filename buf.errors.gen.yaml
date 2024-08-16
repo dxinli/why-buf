@@ -1,5 +1,8 @@
 version: v2
 
+managed:
+  enabled: true
+
 plugins:
   - local: protoc-gen-go-errors
     # Required. Controls where the generated files are deposited for a given plugin.
