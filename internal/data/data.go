@@ -1,7 +1,7 @@
 package data
 
 import (
-	"why-buf/internal/conf"
+	"why.com/buf/internal/conf"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"

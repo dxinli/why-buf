@@ -3,8 +3,9 @@ syntax = "proto3";
 package helloworld.v1;
 
 import "google/api/annotations.proto";
+import "buf/validate/validate.proto";
 
-option go_package = "why-buf/api/helloworld/v1;v1";
+option go_package = "why.com/buf/api/helloworld/v1;v1";
 option java_multiple_files = true;
 option java_package = "dev.kratos.api.helloworld.v1";
 option java_outer_classname = "HelloworldProtoV1";
@@ -21,7 +22,7 @@ service Greeter {
 
 // The request message containing the user's name.
 message HelloRequest {
-  string name = 1;
+  string name = 1 [(buf.validate.field).string.const = "yqy"];
 }
 
 // The response message containing the greetings

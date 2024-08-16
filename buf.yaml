@@ -2,7 +2,7 @@
 version: v2
 modules:
   - path: api
-  - path: third_party
+  - path: internal
 lint:
   use:
     - DEFAULT
@@ -12,3 +12,5 @@ breaking:
 
 deps:
   - buf.build/googleapis/googleapis
+  - buf.build/dxinli/kratos
+  - buf.build/bufbuild/protovalidate

@@ -2,9 +2,11 @@ package service
 
 import (
 	"context"
+	"github.com/go-kratos/kratos/v2/log"
 
-	v1 "why-buf/api/helloworld/v1"
-	"why-buf/internal/biz"
+	validate "github.com/bufbuild/protovalidate-go"
+	v1 "why.com/buf/api/helloworld/v1"
+	"why.com/buf/internal/biz"
 )
 
 // GreeterService is a greeter service.
@@ -21,6 +23,14 @@ func NewGreeterService(uc *biz.GreeterUsecase) *GreeterService {
 
 // SayHello implements helloworld.GreeterServer.
 func (s *GreeterService) SayHello(ctx context.Context, in *v1.HelloRequest) (*v1.HelloReply, error) {
+	log.Info(in.Name)
+	validator, err := validate.New()
+	if err != nil {
+		return nil, err
+	}
+	if err := validator.Validate(in); err != nil {
+		return nil, err
+	}
 	g, err := s.uc.CreateGreeter(ctx, &biz.Greeter{Hello: in.Name})
 	if err != nil {
 		return nil, err

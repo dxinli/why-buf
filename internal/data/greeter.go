@@ -3,7 +3,7 @@ package data
 import (
 	"context"
 
-	"why-buf/internal/biz"
+	"why.com/buf/internal/biz"
 
 	"github.com/go-kratos/kratos/v2/log"
 )

@@ -6,11 +6,11 @@
 package main
 
 import (
-	"why-buf/internal/biz"
-	"why-buf/internal/conf"
-	"why-buf/internal/data"
-	"why-buf/internal/server"
-	"why-buf/internal/service"
+	"why.com/buf/internal/biz"
+	"why.com/buf/internal/conf"
+	"why.com/buf/internal/data"
+	"why.com/buf/internal/server"
+	"why.com/buf/internal/service"
 
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"

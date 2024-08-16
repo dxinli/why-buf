@@ -1,9 +1,9 @@
 package server
 
 import (
-	v1 "why-buf/api/helloworld/v1"
-	"why-buf/internal/conf"
-	"why-buf/internal/service"
+	v1 "why.com/buf/api/helloworld/v1"
+	"why.com/buf/internal/conf"
+	"why.com/buf/internal/service"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
