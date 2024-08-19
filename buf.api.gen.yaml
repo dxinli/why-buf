@@ -33,3 +33,5 @@ plugins:
 
 inputs:
   - directory: api
+    paths:
+      - helloworld/v1/greeter.proto
